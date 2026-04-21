@@ -10,10 +10,10 @@ const contactMethods = [
 ];
 
 const socials = [
-  { icon: <FiGithub />, href: '#', label: 'GitHub' },
-  { icon: <FiLinkedin />, href: '#', label: 'LinkedIn' },
-  { icon: <FiTwitter />, href: '#', label: 'Twitter' },
-  { icon: <FiInstagram />, href: '#', label: 'Instagram' },
+  { icon: <FiGithub />, href: 'https://github.com/DangerRohit84/', label: 'GitHub' },
+  { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/rohit-desina/', label: 'LinkedIn' },
+  { icon: <FiTwitter />, href: 'https://x.com/Danger_Rohit_84', label: 'Twitter' },
+  { icon: <FiInstagram />, href: 'https://www.instagram.com/danger_rohit_07/', label: 'Instagram' },
 ];
 
 const fadeUp = {
