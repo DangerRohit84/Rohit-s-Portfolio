@@ -1,0 +1,228 @@
+/* ===== ANIMATED BACKGROUND ===== */
+.bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background: linear-gradient(160deg, #021a0e 0%, #0a2618 30%, #0d1f18 50%, #051710 80%, #030f09 100%);
+}
+
+/* ===== VIVID GRADIENT BLOBS ===== */
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+.blob-1 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.5) 0%, rgba(16, 185, 129, 0.2) 30%, transparent 65%);
+  top: -20%;
+  left: -10%;
+  filter: blur(60px);
+  animation: drift1 14s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 214, 160, 0.45) 0%, rgba(52, 211, 153, 0.15) 35%, transparent 65%);
+  top: 0%;
+  right: -15%;
+  filter: blur(70px);
+  animation: drift2 18s ease-in-out infinite;
+}
+
+.blob-3 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.4) 0%, rgba(6, 214, 160, 0.15) 35%, transparent 65%);
+  bottom: -15%;
+  left: 30%;
+  filter: blur(65px);
+  animation: drift3 16s ease-in-out infinite;
+}
+
+.blob-4 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.5) 0%, rgba(74, 222, 128, 0.15) 35%, transparent 65%);
+  bottom: 10%;
+  right: 5%;
+  filter: blur(55px);
+  animation: drift4 20s ease-in-out infinite;
+}
+
+.blob-5 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 255, 170, 0.35) 0%, rgba(16, 185, 129, 0.12) 35%, transparent 65%);
+  top: 35%;
+  left: 15%;
+  filter: blur(60px);
+  animation: drift5 15s ease-in-out infinite;
+}
+
+/* ===== BOLD DRIFT ANIMATIONS ===== */
+@keyframes drift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(120px, 100px) scale(1.15); }
+  66% { transform: translate(-80px, 60px) scale(0.9); }
+}
+
+@keyframes drift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-150px, 120px) scale(1.2); }
+  66% { transform: translate(80px, -80px) scale(0.85); }
+}
+
+@keyframes drift3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(100px, -120px) scale(1.1); }
+  66% { transform: translate(-130px, -50px) scale(1.15); }
+}
+
+@keyframes drift4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-100px, -100px) scale(1.2); }
+  66% { transform: translate(100px, -60px) scale(0.9); }
+}
+
+@keyframes drift5 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(150px, -80px) scale(1.25) rotate(180deg); }
+}
+
+/* ===== ANIMATED GRID ===== */
+.bg-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.07) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: gridPulse 8s ease-in-out infinite;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* ===== GLOWING LIGHT STREAKS ===== */
+.bg-streak {
+  position: absolute;
+  height: 2px;
+  border-radius: 999px;
+  opacity: 0;
+}
+
+.streak-1 {
+  width: 300px;
+  top: 25%;
+  left: -300px;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.6), rgba(52, 211, 153, 0.8), transparent);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.2);
+  animation: streak 8s ease-in-out 2s infinite;
+}
+
+.streak-2 {
+  width: 200px;
+  top: 55%;
+  left: -200px;
+  background: linear-gradient(90deg, transparent, rgba(6, 214, 160, 0.5), rgba(20, 184, 166, 0.7), transparent);
+  box-shadow: 0 0 15px rgba(6, 214, 160, 0.3), 0 0 40px rgba(6, 214, 160, 0.15);
+  animation: streak 10s ease-in-out 5s infinite;
+}
+
+.streak-3 {
+  width: 250px;
+  top: 75%;
+  left: -250px;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), rgba(74, 222, 128, 0.7), transparent);
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.3), 0 0 40px rgba(52, 211, 153, 0.15);
+  animation: streak 9s ease-in-out 8s infinite;
+}
+
+/* Vertical streaks */
+.streak-4 {
+  width: 2px;
+  height: 250px;
+  top: -250px;
+  left: 30%;
+  background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.5), rgba(52, 211, 153, 0.7), transparent);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  animation: streakV 12s ease-in-out 3s infinite;
+  border-radius: 999px;
+}
+
+.streak-5 {
+  width: 2px;
+  height: 200px;
+  top: -200px;
+  left: 70%;
+  background: linear-gradient(180deg, transparent, rgba(6, 214, 160, 0.4), rgba(20, 184, 166, 0.6), transparent);
+  box-shadow: 0 0 15px rgba(6, 214, 160, 0.3);
+  animation: streakV 11s ease-in-out 7s infinite;
+  border-radius: 999px;
+}
+
+@keyframes streak {
+  0% { transform: translateX(0); opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { transform: translateX(calc(100vw + 600px)); opacity: 0; }
+}
+
+@keyframes streakV {
+  0% { transform: translateY(0); opacity: 0; }
+  5% { opacity: 0.8; }
+  95% { opacity: 0.8; }
+  100% { transform: translateY(calc(100vh + 500px)); opacity: 0; }
+}
+
+/* ===== CORNER GLOWS ===== */
+.bg-corner-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.corner-tl {
+  top: -200px;
+  left: -200px;
+  background: rgba(16, 185, 129, 0.15);
+  animation: cornerPulse 6s ease-in-out infinite;
+}
+
+.corner-br {
+  bottom: -200px;
+  right: -200px;
+  background: rgba(6, 214, 160, 0.12);
+  animation: cornerPulse 6s ease-in-out 3s infinite;
+}
+
+@keyframes cornerPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .bg-blob {
+    filter: blur(50px);
+  }
+  .blob-1 { width: 400px; height: 400px; }
+  .blob-2 { width: 350px; height: 350px; }
+  .blob-3 { width: 380px; height: 380px; }
+  .blob-4 { width: 300px; height: 300px; }
+  .blob-5 { width: 250px; height: 250px; }
+  .bg-streak { display: none; }
+}
